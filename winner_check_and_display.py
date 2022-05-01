@@ -2,8 +2,8 @@
 from dataclasses import dataclass
 
 from tkinter import Tk, Label, Button
-from project.check_if_winner import WinnerCheck
-from project.exit_options import ExitOptions
+from project.winner_conditions import WinnerCheck
+from project.exit_game_options import ExitOptions
 
 
 @dataclass
@@ -38,7 +38,7 @@ class Winner:
     @staticmethod
     def check_for_winner(count, btn, board, root):
         if count == 9:
-            Winner.display_winner("it's a tie!", root)
+            Winner.display_winner("It's a tie!", root)
         if WinnerCheck.check_rows(board, btn["text"]) or \
                 WinnerCheck.check_columns(board, btn["text"]) or \
                 WinnerCheck.check_diagonals(board, btn["text"]):

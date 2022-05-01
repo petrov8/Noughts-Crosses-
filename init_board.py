@@ -1,8 +1,8 @@
 
 from tkinter import *
 from tkinter import messagebox
-from project.exit_options import ExitOptions
-from project.winner_check import Winner
+from project.exit_game_options import ExitOptions
+from project.winner_check_and_display import Winner
 
 
 class InitBoard:
